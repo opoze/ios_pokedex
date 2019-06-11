@@ -22,11 +22,12 @@ class PokemonTableViewCell: UITableViewCell {
         nameLabel.text = model.name.capitalized
         idLabel.text = model.formattedId
         primaryTypeImageView.image = model.types.first?.icon
+        primaryTypeImageView.backgroundColor = model.types.first?.color
         
         if model.types.count > 1  {
-            secondaryTypeImageView.isHidden = false
             secondaryTypeImageView.image = model.types[1].icon
             secondaryTypeImageView.backgroundColor = model.types[1].color
+            secondaryTypeImageView.isHidden = false
         }
         else {
             secondaryTypeImageView.isHidden = true

@@ -20,7 +20,6 @@ class PokemonListViewController: UIViewController {
         super.viewDidLoad()
         self.configTable()
         fetchData()
-        // Do any additional setup after loading the view.
     }
     
     private func configTable(){
@@ -50,7 +49,6 @@ extension PokemonListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Esta é a segunda maneira de usar um navigator. Sem usar um "segue:
         // Não esquecer de setar o storyboard id no storyboard
-        
         let storyBoard = self.storyboard
         if let detailViewController = storyBoard?.instantiateViewController(withIdentifier: "DetailViewController"){
             // Present é um modal
@@ -63,19 +61,11 @@ extension PokemonListViewController: UITableViewDelegate {
 typealias  PokemonListViewModel = PokemonListViewController
 extension PokemonListViewModel {
     func fetchData() {
-        
-//        requestMaker.make(withEndpoint: .details(query: "2")) { (pokemon: Pokemon) in
-//            print(pokemon)
-//        }
-        
         requestMaker.make(withEndpoint: .list) { (pokemonList: PokemonList) in
-//            print(pokemonList)
             self.pokemonList = pokemonList.pokemons
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
-        
-
     }
 }

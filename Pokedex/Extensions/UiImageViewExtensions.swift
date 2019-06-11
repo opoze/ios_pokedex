@@ -19,12 +19,9 @@ extension UIImageView  {
         if let url = URL(string: urlString) {
             // simplão
             // Nuke.loadImage(with: url, into: self)
-            
             // bonitão
             let options = ImageLoadingOptions(placeholder: .pikachu, transition: .fadeIn(duration: 0.3), failureImage: .pikachu)
-            
             Nuke.loadImage(with: url, options: options, into: self)
         }
-        
     }
 }
