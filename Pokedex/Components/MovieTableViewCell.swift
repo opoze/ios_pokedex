@@ -12,10 +12,11 @@ class MoveTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeImageView: TypeIconUIImageView!
     func config(with model: Move) {
-        typeImageView.isHidden = false
-        typeImageView.image = model.type.icon
-        typeImageView.backgroundColor = model.type.color
-        nameLabel.text = model.name.capitalized
+        DispatchQueue.main.async {
+            self.typeImageView.image = model.type.icon
+            self.typeImageView.backgroundColor = model.type.color
+            self.nameLabel.text = model.name.capitalized
+        }
     }
 }
 

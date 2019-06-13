@@ -13,6 +13,11 @@ struct PokemonList: Codable {
     var pokemons: [Pokemon]
 }
 
+struct Stats: Codable {
+    let value: Int
+    let name: String
+}
+
 struct Pokemon: Codable {
     let id: String
     let name: String
@@ -21,18 +26,6 @@ struct Pokemon: Codable {
     var formattedId: String {
         return String.init(format: "#%03d", Int(self.id) ?? 0)
     }
+    let description: String?
+    let stats: [Stats]?
 }
-
-//extension Pokemon.Type: CustomStringConvertible {
-//    var description: String {
-//        return self.rawValue.capitalized
-//    }
-//}
-//
-//extension Pokemon: CustomStringConvertible {
-//    var description: String {
-//        return "Pokemon: \(self.name.capitalized), com tipos: \(self.types)\n"
-//    }
-//}
-
-

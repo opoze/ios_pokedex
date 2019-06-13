@@ -11,6 +11,7 @@ import UIKit
 class PokemonListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIView!
     
     let requestMaker = RequestMaker()
     
@@ -50,8 +51,9 @@ extension PokemonListViewController: UITableViewDelegate {
         // Esta é a segunda maneira de usar um navigator. Sem usar um "segue:
         // Não esquecer de setar o storyboard id no storyboard
         let storyBoard = self.storyboard
-        if let detailViewController = storyBoard?.instantiateViewController(withIdentifier: "DetailViewController"){
+        if let detailViewController = storyBoard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController{
             // Present é um modal
+            detailViewController.pokemon = self.pokemonList[indexPath.row]
             self.navigationController?.present(detailViewController, animated: true)
         }
     }
@@ -64,6 +66,7 @@ extension PokemonListViewModel {
         requestMaker.make(withEndpoint: .list) { (pokemonList: PokemonList) in
             self.pokemonList = pokemonList.pokemons
             DispatchQueue.main.async {
+                self.activityIndicatorView.isHidden = true
                 self.tableView.reloadData()
             }
         }

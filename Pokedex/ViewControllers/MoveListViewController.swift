@@ -11,6 +11,7 @@ import UIKit
 class MoveListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIView!
     
     let requestMaker = RequestMaker()
 
@@ -44,6 +45,15 @@ extension MoveListViewController: UITableViewDataSource {
 }
 
 extension MoveListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Esta é a segunda maneira de usar um navigator. Sem usar um "segue:
+        // Não esquecer de setar o storyboard id no storyboard
+        let storyBoard = self.storyboard
+        if let moveDetailViewController = storyBoard?.instantiateViewController(withIdentifier: "MoveDetailViewController"){
+            // Present é um modal
+            self.navigationController?.present(moveDetailViewController, animated: true)
+        }
+    }
 }
 
 
@@ -53,6 +63,7 @@ extension MoveListViewModel {
         requestMaker.make(withEndpoint: .move) { (moves: [Move]) in
             self.moveList = moves
             DispatchQueue.main.async {
+                self.activityIndicatorView.isHidden = true
                 self.tableView.reloadData()
             }
         }

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonDetailView" customModule="Pokedex" customModuleProvider="target">
+            <connections>
+                <outlet property="atk" destination="CQS-Ta-zJn" id="2Mf-Ww-FFz"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="aZv-RS-fQJ"/>
+                <outlet property="def" destination="yH5-ey-Mbp" id="Bhp-RO-NPR"/>
+                <outlet property="descriptionLabel" destination="cdD-QI-kZ5" id="JnF-AQ-ynX"/>
+                <outlet property="hp" destination="sYm-qH-RI0" id="cSU-OP-pgJ"/>
+                <outlet property="nameLabel" destination="m80-6D-Xwq" id="D35-r3-8d7"/>
+                <outlet property="pokemonTypeView" destination="5P7-wn-tc1" id="x1N-f0-JTj"/>
+                <outlet property="satk" destination="EX1-bV-F0d" id="tgX-Rw-Iwd"/>
+                <outlet property="sdef" destination="DHU-ge-1vq" id="56m-Qq-z2W"/>
+                <outlet property="spd" destination="0y0-hM-uSl" id="f5G-Or-zzT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="399"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Re-2H-JeI" userLabel="Description Stack View">
+                    <rect key="frame" x="0.0" y="60" width="375" height="122.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m80-6D-Xwq" userLabel="Name Label">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5qu-lV-lAE" userLabel="Pokemon Type Stack View">
+                            <rect key="frame" x="0.0" y="53" width="375" height="30"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P7-wn-tc1" customClass="PokemonTypeView" customModule="Pokedex" customModuleProvider="target">
+                                    <rect key="frame" x="140" y="0.0" width="95" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="hhJ-gh-8Iu"/>
+                                        <constraint firstAttribute="width" constant="95" id="toF-nW-gve"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdD-QI-kZ5" userLabel="Description Label">
+                            <rect key="frame" x="0.0" y="103" width="375" height="19.5"/>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                            <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qt4-UX-6ez" userLabel="Stats Stack View">
+                    <rect key="frame" x="0.0" y="202.5" width="375" height="214"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIq-Xs-TJz" userLabel="Stat Label">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="18"/>
+                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
+                            <color key="textColor" red="0.33333333333333331" green="0.61960784313725492" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZVd-WX-XSC" userLabel="Gauges Stack View">
+                            <rect key="frame" x="0.0" y="26" width="375" height="188"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYm-qH-RI0" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="18"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="k89-EU-79V"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQS-Ta-zJn" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="34" width="375" height="18"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="42u-8r-wMB"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yH5-ey-Mbp" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="68" width="375" height="18"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="5an-L8-AHz"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EX1-bV-F0d" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="102" width="375" height="18"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="wWD-UN-EKV"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHU-ge-1vq" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="136" width="375" height="18"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="yqZ-z8-rcX"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y0-hM-uSl" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="170" width="375" height="18"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="3Av-v8-oRu"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Qt4-UX-6ez" firstAttribute="top" secondItem="7Re-2H-JeI" secondAttribute="bottom" constant="20" id="Rqt-mV-TUF"/>
+                <constraint firstItem="7Re-2H-JeI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xtv-Yk-gCV"/>
+                <constraint firstAttribute="trailing" secondItem="7Re-2H-JeI" secondAttribute="trailing" id="kGf-4l-eGV"/>
+                <constraint firstItem="Qt4-UX-6ez" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="t3j-6D-clG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qt4-UX-6ez" secondAttribute="trailing" id="zpc-pl-eeu"/>
+                <constraint firstItem="7Re-2H-JeI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="zyt-gj-UTk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="80.799999999999997" y="48.125937031484263"/>
+        </view>
+    </objects>
+</document>
