@@ -60,6 +60,20 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F2a-zO-1eg">
                                 <rect key="frame" x="0.0" y="69" width="414" height="613"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="0AK-lk-Hrx">
+                                    <rect key="frame" x="0.0" y="103" width="414" height="623"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7gP-aZ-r4v">
+                                            <rect key="frame" x="188.66666666666666" y="293" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="7gP-aZ-r4v" firstAttribute="centerY" secondItem="0AK-lk-Hrx" secondAttribute="centerY" id="8iq-LU-c6F"/>
+                                        <constraint firstItem="7gP-aZ-r4v" firstAttribute="centerX" secondItem="0AK-lk-Hrx" secondAttribute="centerX" id="cWZ-sm-d6k"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pokemon" id="Gyb-v7-N2x" customClass="PokemonTableViewCell" customModule="Pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="75"/>
@@ -101,33 +115,32 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Smr-lt-AU7">
                                                             <rect key="frame" x="306" y="22.333333333333329" width="68" height="30"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_grass" translatesAutoresizingMaskIntoConstraints="NO" id="tHB-Ku-q52" customClass="TypeIconUIImageView" customModule="Pokedex" customModuleProvider="target">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0p-ln-UE3" customClass="PokemonTypeView" customModule="Pokedex" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                                    <color key="backgroundColor" name="dark"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="30" id="yJn-B3-rHV"/>
+                                                                        <constraint firstAttribute="height" constant="30" id="EVl-g3-Sao"/>
+                                                                        <constraint firstAttribute="width" constant="30" id="o92-6z-bVw"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                             <real key="value" value="15"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
-                                                                </imageView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_poison" translatesAutoresizingMaskIntoConstraints="NO" id="IM7-vP-z3A" customClass="TypeIconUIImageView" customModule="Pokedex" customModuleProvider="target">
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awV-R2-W0b" customClass="PokemonTypeView" customModule="Pokedex" customModuleProvider="target">
                                                                     <rect key="frame" x="38" y="0.0" width="30" height="30"/>
-                                                                    <color key="backgroundColor" name="poison"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="30" id="5VK-uO-ufQ"/>
+                                                                        <constraint firstAttribute="width" constant="30" id="j91-pj-Orc"/>
+                                                                        <constraint firstAttribute="height" constant="30" id="uX2-wm-voJ"/>
                                                                     </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                             <real key="value" value="15"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
-                                                                </imageView>
+                                                                </view>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="iUx-1P-RCE"/>
@@ -154,37 +167,20 @@
                                         <connections>
                                             <outlet property="idLabel" destination="RIn-pB-PdR" id="yN0-C4-3ec"/>
                                             <outlet property="nameLabel" destination="GVQ-QP-2Yp" id="fwf-nM-WqZ"/>
+                                            <outlet property="pType" destination="z0p-ln-UE3" id="gxb-a6-30A"/>
                                             <outlet property="pictureImageView" destination="XL1-gn-ph9" id="Jj7-3y-8Ou"/>
-                                            <outlet property="primaryTypeImageView" destination="tHB-Ku-q52" id="zit-Bd-ROw"/>
-                                            <outlet property="secondaryTypeImageView" destination="IM7-vP-z3A" id="En8-AC-U4N"/>
+                                            <outlet property="sType" destination="awV-R2-W0b" id="jOV-GW-e8s"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0AK-lk-Hrx">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7gP-aZ-r4v">
-                                        <rect key="frame" x="188.66666666666666" y="293" width="37" height="37"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="7gP-aZ-r4v" firstAttribute="centerY" secondItem="0AK-lk-Hrx" secondAttribute="centerY" id="8iq-LU-c6F"/>
-                                    <constraint firstItem="7gP-aZ-r4v" firstAttribute="centerX" secondItem="0AK-lk-Hrx" secondAttribute="centerX" id="cWZ-sm-d6k"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="F2a-zO-1eg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="8TD-Cz-rnh"/>
                             <constraint firstItem="F2a-zO-1eg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QTd-Tx-fG1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0AK-lk-Hrx" secondAttribute="trailing" id="TSe-Wy-1Wh"/>
                             <constraint firstAttribute="trailing" secondItem="F2a-zO-1eg" secondAttribute="trailing" id="TYQ-f0-fkb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F2a-zO-1eg" secondAttribute="bottom" constant="5" id="WJs-gE-BmE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0AK-lk-Hrx" secondAttribute="bottom" id="aAX-Gq-YHz"/>
-                            <constraint firstItem="0AK-lk-Hrx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iH6-YA-FaV"/>
-                            <constraint firstItem="0AK-lk-Hrx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pSs-wz-jBZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <userDefinedRuntimeAttributes>
@@ -490,6 +486,20 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dS7-Ds-19F">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="XxH-kW-VMr">
+                                    <rect key="frame" x="0.0" y="103" width="414" height="623"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="81F-N9-eOA">
+                                            <rect key="frame" x="188.66666666666666" y="293" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="81F-N9-eOA" firstAttribute="centerY" secondItem="XxH-kW-VMr" secondAttribute="centerY" id="6AQ-r1-szV"/>
+                                        <constraint firstItem="81F-N9-eOA" firstAttribute="centerX" secondItem="XxH-kW-VMr" secondAttribute="centerX" id="DH9-8C-e5I"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="move" id="W31-s6-Gu7" customClass="MoveTableViewCell" customModule="Pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="75"/>
@@ -507,19 +517,18 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_ghost" translatesAutoresizingMaskIntoConstraints="NO" id="DGP-Ll-ucN" customClass="TypeIconUIImageView" customModule="Pokedex" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXW-MB-jbi" customClass="PokemonTypeView" customModule="Pokedex" customModuleProvider="target">
                                                             <rect key="frame" x="344" y="22.333333333333329" width="30" height="30"/>
-                                                            <color key="backgroundColor" name="bug"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="30" id="E0q-Vy-wMY"/>
-                                                                <constraint firstAttribute="height" constant="30" id="Q4f-ZE-E4g"/>
+                                                                <constraint firstAttribute="height" constant="30" id="C6F-Sb-87c"/>
+                                                                <constraint firstAttribute="width" constant="30" id="voe-Gt-K4s"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="15"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
-                                                        </imageView>
+                                                        </view>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -532,38 +541,21 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="Eia-4j-No7" id="Nra-iI-YTR"/>
-                                            <outlet property="typeImageView" destination="DGP-Ll-ucN" id="yKj-j3-UkZ"/>
+                                            <outlet property="type" destination="JXW-MB-jbi" id="04k-Cj-q65"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxH-kW-VMr">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="81F-N9-eOA">
-                                        <rect key="frame" x="188.66666666666666" y="293" width="37" height="37"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="81F-N9-eOA" firstAttribute="centerY" secondItem="XxH-kW-VMr" secondAttribute="centerY" id="6AQ-r1-szV"/>
-                                    <constraint firstItem="81F-N9-eOA" firstAttribute="centerX" secondItem="XxH-kW-VMr" secondAttribute="centerX" id="DH9-8C-e5I"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XxH-kW-VMr" firstAttribute="leading" secondItem="Jd6-0y-h59" secondAttribute="leading" id="3qZ-8W-HUk"/>
                             <constraint firstItem="dS7-Ds-19F" firstAttribute="bottom" secondItem="Jd6-0y-h59" secondAttribute="bottom" id="ESy-Bf-8vV"/>
                             <constraint firstItem="Jd6-0y-h59" firstAttribute="bottom" secondItem="dS7-Ds-19F" secondAttribute="bottom" id="N3g-cM-BYx"/>
                             <constraint firstItem="dS7-Ds-19F" firstAttribute="trailing" secondItem="Jd6-0y-h59" secondAttribute="trailing" id="NHs-Ih-faJ"/>
                             <constraint firstItem="dS7-Ds-19F" firstAttribute="leading" secondItem="Jd6-0y-h59" secondAttribute="leading" id="OZh-bT-7XY"/>
                             <constraint firstItem="dS7-Ds-19F" firstAttribute="leading" secondItem="Jd6-0y-h59" secondAttribute="leading" id="ZmL-jD-IRN"/>
-                            <constraint firstItem="Jd6-0y-h59" firstAttribute="trailing" secondItem="XxH-kW-VMr" secondAttribute="trailing" id="e2I-ji-rsJ"/>
                             <constraint firstItem="dS7-Ds-19F" firstAttribute="top" secondItem="Jd6-0y-h59" secondAttribute="top" id="eJd-45-3x8"/>
                             <constraint firstItem="Jd6-0y-h59" firstAttribute="trailing" secondItem="dS7-Ds-19F" secondAttribute="trailing" id="lcS-Yg-KgP"/>
-                            <constraint firstItem="Jd6-0y-h59" firstAttribute="bottom" secondItem="XxH-kW-VMr" secondAttribute="bottom" id="mgw-L0-WiH"/>
-                            <constraint firstItem="XxH-kW-VMr" firstAttribute="top" secondItem="Jd6-0y-h59" secondAttribute="top" id="wZY-Yg-I8X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jd6-0y-h59"/>
                         <userDefinedRuntimeAttributes>
@@ -678,27 +670,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_ghost" width="14" height="14"/>
-        <image name="ic_grass" width="13" height="14"/>
-        <image name="ic_poison" width="15" height="15"/>
         <image name="ic_return" width="21" height="12"/>
         <image name="ic_water" width="10" height="15"/>
         <image name="movesshadow" width="26" height="26"/>
         <image name="pikashadow" width="28" height="28"/>
-        <namedColor name="bug">
-            <color red="0.61599999666213989" green="0.75700002908706665" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="dark">
-            <color red="0.37299999594688416" green="0.37599998712539673" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="dragon">
             <color red="0.027000000700354576" green="0.45100000500679016" blue="0.77999997138977051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ice">
             <color red="0.49399998784065247" green="0.83099997043609619" blue="0.78799998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="poison">
-            <color red="0.70999997854232788" green="0.3880000114440918" blue="0.80800002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="pokemonId">
             <color red="0.64313725490196083" green="0.64313725490196083" blue="0.64313725490196083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

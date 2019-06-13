@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension TypeIconUIImageView {
+extension PokemonTypeView {
     func addShadow() {
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -17,4 +17,3 @@ extension TypeIconUIImageView {
         clipsToBounds = false
     }
 }
-

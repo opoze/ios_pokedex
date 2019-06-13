@@ -35,6 +35,7 @@ class PokemonTypeView: UIView {
         self.typeImageView.image = type.icon
         self.typeLabel.text = type.rawValue.uppercased()
         self.contentView.backgroundColor = type.color
+        self.addShadow()
     }
     
 }

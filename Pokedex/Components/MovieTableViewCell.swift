@@ -10,11 +10,12 @@ import UIKit
 
 class MoveTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var typeImageView: TypeIconUIImageView!
+    @IBOutlet weak var type: PokemonTypeView!
     func config(with model: Move) {
         DispatchQueue.main.async {
-            self.typeImageView.image = model.type.icon
-            self.typeImageView.backgroundColor = model.type.color
+            self.type.config(type: model.type)
+            self.type.typeLabel.isHidden = true
+            self.type.addShadow()
             self.nameLabel.text = model.name.capitalized
         }
     }
