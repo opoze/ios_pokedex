@@ -36,7 +36,7 @@ class StateGaugeView: UIView {
     
     func config(name: String, stat: Int) {
         self.nameLabel.text = name
-        self.statLabel.text = "\(stat)"
+        self.statLabel.text = String(format: "%03d", arguments: [stat])
         self.stat = stat
     }
     

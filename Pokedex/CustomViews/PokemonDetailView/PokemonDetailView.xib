@@ -22,6 +22,7 @@
                 <outlet property="pokemonTypeView" destination="5P7-wn-tc1" id="x1N-f0-JTj"/>
                 <outlet property="satk" destination="EX1-bV-F0d" id="tgX-Rw-Iwd"/>
                 <outlet property="sdef" destination="DHU-ge-1vq" id="56m-Qq-z2W"/>
+                <outlet property="secPokemonTypeView" destination="Nbe-cU-Eyn" id="OzI-m9-xUI"/>
                 <outlet property="spd" destination="0y0-hM-uSl" id="f5G-Or-zzT"/>
             </connections>
         </placeholder>
@@ -30,43 +31,51 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="399"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Re-2H-JeI" userLabel="Description Stack View">
-                    <rect key="frame" x="0.0" y="60" width="375" height="122.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m80-6D-Xwq" userLabel="Name Label">
+                    <rect key="frame" x="155" y="60" width="65" height="33"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="5qu-lV-lAE" userLabel="Pokemon Type Stack View">
+                    <rect key="frame" x="140" y="113" width="95" height="30"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m80-6D-Xwq" userLabel="Name Label">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
-                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5qu-lV-lAE" userLabel="Pokemon Type Stack View">
-                            <rect key="frame" x="0.0" y="53" width="375" height="30"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P7-wn-tc1" customClass="PokemonTypeView" customModule="Pokedex" customModuleProvider="target">
-                                    <rect key="frame" x="140" y="0.0" width="95" height="30"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="hhJ-gh-8Iu"/>
-                                        <constraint firstAttribute="width" constant="95" id="toF-nW-gve"/>
-                                    </constraints>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="15"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </view>
-                            </subviews>
-                        </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdD-QI-kZ5" userLabel="Description Label">
-                            <rect key="frame" x="0.0" y="103" width="375" height="19.5"/>
-                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                            <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P7-wn-tc1" customClass="PokemonTypeView" customModule="Pokedex" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="hhJ-gh-8Iu"/>
+                                <constraint firstAttribute="width" constant="95" id="toF-nW-gve"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nbe-cU-Eyn" customClass="PokemonTypeView" customModule="Pokedex" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="95" id="mLo-2v-vWM"/>
+                                <constraint firstAttribute="height" constant="30" id="xQE-MA-j7T"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdD-QI-kZ5" userLabel="Description Label">
+                    <rect key="frame" x="0.0" y="168" width="375" height="19.5"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qt4-UX-6ez" userLabel="Stats Stack View">
-                    <rect key="frame" x="0.0" y="202.5" width="375" height="214"/>
+                    <rect key="frame" x="0.0" y="207.5" width="375" height="214"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIq-Xs-TJz" userLabel="Stat Label">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="18"/>
@@ -156,12 +165,16 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Qt4-UX-6ez" firstAttribute="top" secondItem="7Re-2H-JeI" secondAttribute="bottom" constant="20" id="Rqt-mV-TUF"/>
-                <constraint firstItem="7Re-2H-JeI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xtv-Yk-gCV"/>
-                <constraint firstAttribute="trailing" secondItem="7Re-2H-JeI" secondAttribute="trailing" id="kGf-4l-eGV"/>
+                <constraint firstItem="m80-6D-Xwq" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="0gI-cE-gzw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cdD-QI-kZ5" secondAttribute="trailing" id="2Vt-3m-tb3"/>
+                <constraint firstItem="cdD-QI-kZ5" firstAttribute="top" secondItem="5qu-lV-lAE" secondAttribute="bottom" constant="25" id="B6v-hX-bJ5"/>
+                <constraint firstItem="5qu-lV-lAE" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="ITB-1D-jry"/>
+                <constraint firstItem="cdD-QI-kZ5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NPy-58-IhS"/>
+                <constraint firstItem="Qt4-UX-6ez" firstAttribute="top" secondItem="cdD-QI-kZ5" secondAttribute="bottom" constant="20" id="Rqt-mV-TUF"/>
+                <constraint firstItem="5qu-lV-lAE" firstAttribute="top" secondItem="m80-6D-Xwq" secondAttribute="bottom" constant="20" id="dXh-gF-RHq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="m80-6D-Xwq" secondAttribute="bottom" constant="-93" id="hDs-JG-dYd"/>
                 <constraint firstItem="Qt4-UX-6ez" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="t3j-6D-clG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qt4-UX-6ez" secondAttribute="trailing" id="zpc-pl-eeu"/>
-                <constraint firstItem="7Re-2H-JeI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="zyt-gj-UTk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

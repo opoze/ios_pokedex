@@ -14,6 +14,7 @@ class PokemonDetailView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var pokemonTypeView: PokemonTypeView!
+    @IBOutlet weak var secPokemonTypeView: PokemonTypeView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -47,8 +48,15 @@ class PokemonDetailView: UIView {
         
         // Config pokemonTypeView
         self.pokemon = pokemon
-        if let type = self.pokemon?.types.first {
-            self.pokemonTypeView.config(type: type)
+        
+        if let pokemonTypes = self.pokemon?.types {
+            if pokemonTypes.count >= 1 {
+                self.pokemonTypeView.config(type: pokemonTypes[0])
+            }
+            if pokemonTypes.count >= 2 {
+                self.secPokemonTypeView.isHidden = false
+                self.secPokemonTypeView.config(type: pokemonTypes[1])
+            }
         }
         
         self.nameLabel.text = pokemon.name.capitalized
