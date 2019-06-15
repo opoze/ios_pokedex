@@ -86,7 +86,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZVd-WX-XSC" userLabel="Gauges Stack View">
                             <rect key="frame" x="0.0" y="26" width="375" height="188"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYm-qH-RI0" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYm-qH-RI0" customClass="StatGaugeView" customModule="Pokedex" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="18"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -98,7 +98,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQS-Ta-zJn" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQS-Ta-zJn" customClass="StatGaugeView" customModule="Pokedex" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="34" width="375" height="18"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -110,7 +110,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yH5-ey-Mbp" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yH5-ey-Mbp" customClass="StatGaugeView" customModule="Pokedex" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="68" width="375" height="18"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -122,7 +122,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EX1-bV-F0d" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EX1-bV-F0d" customClass="StatGaugeView" customModule="Pokedex" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="102" width="375" height="18"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -134,7 +134,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHU-ge-1vq" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHU-ge-1vq" customClass="StatGaugeView" customModule="Pokedex" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="136" width="375" height="18"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -146,7 +146,7 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y0-hM-uSl" customClass="StateGaugeView" customModule="Pokedex" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y0-hM-uSl" customClass="StatGaugeView" customModule="Pokedex" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="170" width="375" height="18"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>

@@ -18,12 +18,12 @@ class PokemonDetailView: UIView {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    @IBOutlet weak var hp: StateGaugeView!
-    @IBOutlet weak var atk: StateGaugeView!
-    @IBOutlet weak var def: StateGaugeView!
-    @IBOutlet weak var satk: StateGaugeView!
-    @IBOutlet weak var sdef: StateGaugeView!
-    @IBOutlet weak var spd: StateGaugeView!
+    @IBOutlet weak var hp: StatGaugeView!
+    @IBOutlet weak var atk: StatGaugeView!
+    @IBOutlet weak var def: StatGaugeView!
+    @IBOutlet weak var satk: StatGaugeView!
+    @IBOutlet weak var sdef: StatGaugeView!
+    @IBOutlet weak var spd: StatGaugeView!
     
     let nibName = "PokemonDetailView"
     

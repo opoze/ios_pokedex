@@ -8,9 +8,9 @@
 
 import UIKit
 
-class StateGaugeView: UIView {
+class StatGaugeView: UIView {
     
-    let nibName: String = "StateGaugeView"
+    let nibName: String = "StatGaugeView"
     
     var stat: Int = 0
     
