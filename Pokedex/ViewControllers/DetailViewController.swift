@@ -27,6 +27,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.accessibilityIdentifier = "detailView"
         self.initialConfig()
     }
     

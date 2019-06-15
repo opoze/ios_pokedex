@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct PokemonResponse: Codable {
+    let list: PokemonList
+}
+
 // Can use quicktype.io para gerar as structs
 struct PokemonList: Codable {
     var pokemons: [Pokemon]

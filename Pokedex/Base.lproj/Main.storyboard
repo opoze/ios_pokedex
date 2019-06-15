@@ -30,7 +30,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnB-Ef-8tv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2222" y="-269"/>
+            <point key="canvasLocation" x="-1875" y="-1154"/>
         </scene>
         <!--Pokemon-->
         <scene sceneID="5Rw-2l-7WX">
@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295.6521739130435" y="-269.83695652173913"/>
+            <point key="canvasLocation" x="-1290" y="539"/>
         </scene>
         <!--Move Detail View Controller-->
         <scene sceneID="NPt-ie-Ypp">
@@ -473,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1z6-PS-nIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295.19999999999999" y="525.78710644677665"/>
+            <point key="canvasLocation" x="-3284" y="539"/>
         </scene>
         <!--Moves-->
         <scene sceneID="x5w-rB-HpK">
@@ -576,7 +576,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHW-2v-Ber" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1290" y="526"/>
+            <point key="canvasLocation" x="-2446" y="539"/>
         </scene>
         <!--Moves-->
         <scene sceneID="cSa-9W-1I1">
@@ -593,7 +593,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mjm-vG-O72" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2223" y="526"/>
+            <point key="canvasLocation" x="-2446" y="-271"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="OfQ-2p-rUW">
@@ -640,7 +640,7 @@
                             <constraint firstItem="yqz-os-jKu" firstAttribute="top" secondItem="jFl-ZD-BUQ" secondAttribute="top" id="RCV-YJ-RMJ"/>
                             <constraint firstItem="J4n-qt-0PK" firstAttribute="centerY" secondItem="jFl-ZD-BUQ" secondAttribute="centerY" priority="999" id="V6i-Yl-dyz"/>
                             <constraint firstItem="VTY-bs-vfY" firstAttribute="bottom" secondItem="jFl-ZD-BUQ" secondAttribute="bottom" constant="40" id="ZtI-Rt-M8F"/>
-                            <constraint firstItem="J4n-qt-0PK" firstAttribute="top" secondItem="jFl-ZD-BUQ" secondAttribute="top" priority="900" constant="20" id="mL4-cg-ZNO"/>
+                            <constraint firstItem="J4n-qt-0PK" firstAttribute="top" secondItem="jFl-ZD-BUQ" secondAttribute="top" priority="900" id="mL4-cg-ZNO"/>
                             <constraint firstItem="jFl-ZD-BUQ" firstAttribute="trailing" secondItem="VTY-bs-vfY" secondAttribute="trailing" id="ou4-wF-ImT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jFl-ZD-BUQ"/>
@@ -666,7 +666,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Txc-jL-0KH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="579.71014492753625" y="-269.83695652173913"/>
+            <point key="canvasLocation" x="-499" y="539"/>
         </scene>
     </scenes>
     <resources>
